@@ -72,11 +72,14 @@ function eliminateTeam(teams) {
  */
 function secondHalfOfArrayIfItIsEven(fruits) {
   // Your code here
-  const half = Math.ceil(fruits.length / 2);
-  if (fruits.length % 2 === 0) {
-    return fruits.slice(-half);
+
+  let check = isArrayLengthEven(fruits);
+  let length = fruits.length;
+  let loc = length / 2;
+  if (check === true) {
+    return fruits.splice(loc, length - 1);
   } else {
-    return (fruits.length = 0);
+    return fruits.splice(0, 0);
   }
 }
 
@@ -96,7 +99,8 @@ function secondHalfOfArrayIfItIsEven(fruits) {
  */
 function youGottaCalmDown(shout) {
   // Your code here
-  return shout.slice(0, shout.indexof("!") + 1);
+  const index = shout.indexOf("!");
+  return shout.slice(0, index + 1);
 }
 
 module.exports = {
