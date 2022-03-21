@@ -75,6 +75,7 @@ function secondHalfOfArrayIfItIsEven(fruits) {
 
   let check = isArrayLengthEven(fruits);
   let length = fruits.length;
+  console.log("hello world");
   let loc = length / 2;
   if (check === true) {
     return fruits.splice(loc, length - 1);
